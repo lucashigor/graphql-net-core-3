@@ -18,6 +18,26 @@ namespace api.Controllers
 		public GraphQLController(ApplicationDbContext db)
 		{
 			_db = db;
+
+			_db.Produtos.Add(new Produto() { 
+			CodigoBarras = "asdasasdasd",
+			Nome = "Nome 1",
+			Preco = 122
+			});
+
+			_db.Produtos.Add(new Produto()
+			{
+				CodigoBarras = "asdasasdasd",
+				Nome = "Nome 2",
+				Preco = 123
+			});
+
+			_db.Produtos.Add(new Produto()
+			{
+				CodigoBarras = "asdasasdasd",
+				Nome = "Nome 3",
+				Preco = 124
+			});
 		}
 
 		[HttpPost]
